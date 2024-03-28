@@ -1,0 +1,3 @@
+# Simply Flip Clock
+
+A consult project for schesule alarm using a pomodoro alarm and more...
