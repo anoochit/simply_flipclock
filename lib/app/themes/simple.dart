@@ -5,6 +5,8 @@ import '../data/models/clock_theme.dart';
 class SimpleTheme extends ClockTheme {
   SimpleTheme(super.context);
 
+  // TODO : add more theme details
+
   sizeM() {
     return TextStyle(fontSize: textStyle.fontSize);
   }

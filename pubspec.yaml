@@ -6,9 +6,10 @@ environment:
   sdk: '>=3.3.2 <4.0.0'
 
 dependencies:
+  animated_flip_counter: ^0.3.2
   cupertino_icons: ^1.0.6
   flutter:
-    sdk: flutter 
+    sdk: flutter
   fullscreen_window: ^1.0.4
   gap: ^3.0.1
   get: 4.6.6

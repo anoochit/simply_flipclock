@@ -6,7 +6,11 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // enable wake lock
   WakelockPlus.enable();
+
+  // set fullscreen
   FullScreenWindow.setFullScreen(true);
 
   runApp(

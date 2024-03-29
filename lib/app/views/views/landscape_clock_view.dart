@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -13,12 +14,6 @@ class LandscapeClockView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    Timer.periodic(const Duration(seconds: 1), (timer) {
-      controller.hour.value = DateTime.now().hour;
-      controller.minute.value = DateTime.now().minute;
-      controller.second.value = DateTime.now().second;
-    });
-
     var format = NumberFormat("00");
 
     return Center(
@@ -27,9 +22,10 @@ class LandscapeClockView extends GetView<HomeController> {
           mainAxisSize: MainAxisSize.min,
           children: [
             // hour
-            Text(
-              format.format(controller.hour.value),
-              style: SimpleTheme(context).sizeXL(),
+            AnimatedFlipCounter(
+              wholeDigits: 2,
+              value: controller.hour.value,
+              textStyle: SimpleTheme(context).sizeXL(),
             ),
 
             Text(
@@ -38,9 +34,10 @@ class LandscapeClockView extends GetView<HomeController> {
             ),
 
             // minute
-            Text(
-              format.format(controller.minute.value),
-              style: SimpleTheme(context).sizeXL(),
+            AnimatedFlipCounter(
+              wholeDigits: 2,
+              value: controller.minute.value,
+              textStyle: SimpleTheme(context).sizeXL(),
             ),
 
             Text(
@@ -49,9 +46,10 @@ class LandscapeClockView extends GetView<HomeController> {
             ),
 
             // seconds
-            Text(
-              format.format(controller.second.value),
-              style: SimpleTheme(context).sizeXL(),
+            AnimatedFlipCounter(
+              wholeDigits: 2,
+              value: controller.second.value,
+              textStyle: SimpleTheme(context).sizeXL(),
             ),
           ],
         ),
