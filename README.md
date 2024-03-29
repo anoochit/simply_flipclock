@@ -6,7 +6,8 @@ A consult project for schesule alarm using a pomodoro alarm and more...
 
 Todo features
 
-- [ ] Clock
+- [x] Clock
+- [ ] Clock theme settings
 - [ ] Pomodoro alarm
 - [ ] Stop clock
 - [ ] Ambient sound
