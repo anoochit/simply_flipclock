@@ -10,3 +10,9 @@ Todo features
 - [ ] Pomodoro alarm
 - [ ] Stop clock
 - [ ] Ambient sound
+
+Screenshots
+
+![](/screenshots/screenshot01.png)
+
+![](/screenshots/screenshot02.png)
