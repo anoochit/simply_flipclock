@@ -19,7 +19,7 @@ class SimpleTheme extends ClockTheme {
     return TextStyle(
       fontSize: textStyle.fontSize! * 2,
       fontWeight: FontWeight.w500,
-      height: 1.0,
+      height: 1.15,
     );
   }
 
@@ -28,7 +28,7 @@ class SimpleTheme extends ClockTheme {
     return TextStyle(
       fontSize: textStyle.fontSize! * 2.5,
       fontWeight: FontWeight.w500,
-      height: 1.0,
+      height: 1.15,
     );
   }
 }
