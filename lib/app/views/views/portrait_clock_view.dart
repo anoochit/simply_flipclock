@@ -1,7 +1,6 @@
 import 'package:animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 import '../../modules/home/controllers/home_controller.dart';
 import '../../themes/simple.dart';
@@ -11,8 +10,6 @@ class PortraitClockView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    var format = NumberFormat("00");
-
     return Center(
       child: Obx(
         () => Column(
