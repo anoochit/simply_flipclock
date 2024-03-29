@@ -5,17 +5,30 @@ import '../data/models/clock_theme.dart';
 class SimpleTheme extends ClockTheme {
   SimpleTheme(super.context);
 
-  // TODO : add more theme details
-
-  sizeM() {
-    return TextStyle(fontSize: textStyle.fontSize);
+  @override
+  TextStyle sizeM() {
+    return TextStyle(
+      fontSize: textStyle.fontSize,
+      fontWeight: FontWeight.w500,
+      height: 1.15,
+    );
   }
 
-  sizeL() {
-    return TextStyle(fontSize: textStyle.fontSize! * 2);
+  @override
+  TextStyle sizeL() {
+    return TextStyle(
+      fontSize: textStyle.fontSize! * 2,
+      fontWeight: FontWeight.w500,
+      height: 1.0,
+    );
   }
 
-  sizeXL() {
-    return TextStyle(fontSize: textStyle.fontSize! * 2.5);
+  @override
+  TextStyle sizeXL() {
+    return TextStyle(
+      fontSize: textStyle.fontSize! * 2.5,
+      fontWeight: FontWeight.w500,
+      height: 1.0,
+    );
   }
 }
