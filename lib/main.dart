@@ -11,9 +11,12 @@ void main() {
 
   runApp(
     GetMaterialApp(
-      title: "Application",
+      title: "Simply Flip Clock",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      themeMode: ThemeMode.system,
+      theme: ThemeData(),
+      darkTheme: ThemeData.dark(),
     ),
   );
 }

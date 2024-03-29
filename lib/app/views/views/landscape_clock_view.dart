@@ -1,15 +1,60 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+import 'package:simply_flipclock/app/modules/home/controllers/home_controller.dart';
 
-class LandscapeClockView extends GetView {
+import '../../themes/simple.dart';
+
+class LandscapeClockView extends GetView<HomeController> {
   const LandscapeClockView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      controller.hour.value = DateTime.now().hour;
+      controller.minute.value = DateTime.now().minute;
+      controller.second.value = DateTime.now().second;
+    });
+
+    var format = NumberFormat("00");
+
     return Center(
-      child: Text(
-        'LandscapeClockView is working',
-        style: TextStyle(fontSize: 20),
+      child: Obx(
+        () => Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // hour
+            Text(
+              format.format(controller.hour.value),
+              style: SimpleTheme(context).sizeXL(),
+            ),
+
+            Text(
+              ':',
+              style: SimpleTheme(context).sizeXL(),
+            ),
+
+            // minute
+            Text(
+              format.format(controller.minute.value),
+              style: SimpleTheme(context).sizeXL(),
+            ),
+
+            Text(
+              ':',
+              style: SimpleTheme(context).sizeXL(),
+            ),
+
+            // seconds
+            Text(
+              format.format(controller.second.value),
+              style: SimpleTheme(context).sizeXL(),
+            ),
+          ],
+        ),
       ),
     );
   }
