@@ -17,7 +17,7 @@ class HomeView extends GetView<HomeController> {
             return const PortraitClockView();
           } else {
             // show landscape
-            return LandscapeClockView();
+            return const LandscapeClockView();
           }
         },
       ),

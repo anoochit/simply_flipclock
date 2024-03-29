@@ -9,7 +9,7 @@ import 'package:simply_flipclock/app/modules/home/controllers/home_controller.da
 import '../../themes/simple.dart';
 
 class LandscapeClockView extends GetView<HomeController> {
-  const LandscapeClockView({Key? key}) : super(key: key);
+  const LandscapeClockView({super.key});
 
   @override
   Widget build(BuildContext context) {
