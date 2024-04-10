@@ -9,7 +9,11 @@ class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
   @override
   Widget build(BuildContext context) {
+    // Force dark background as block color
+    final brightness = MediaQuery.of(context).platformBrightness;
+    bool isDarkMode = brightness == Brightness.dark;
     return Scaffold(
+      backgroundColor: isDarkMode ? Colors.black : Colors.white,
       body: OrientationBuilder(
         builder: (context, orientation) {
           if (orientation == Orientation.portrait) {

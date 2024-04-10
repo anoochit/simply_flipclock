@@ -31,4 +31,12 @@ class SimpleTheme extends ClockTheme {
       height: 1.15,
     );
   }
+
+  TextStyle sizeXXL() {
+    return TextStyle(
+      fontSize: textStyle.fontSize! * 4,
+      fontWeight: FontWeight.w500,
+      height: 1.15,
+    );
+  }
 }

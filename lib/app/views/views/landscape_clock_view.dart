@@ -20,31 +20,41 @@ class LandscapeClockView extends GetView<HomeController> {
             AnimatedFlipCounter(
               wholeDigits: 2,
               value: controller.hour.value,
-              textStyle: SimpleTheme(context).sizeXL(),
+              textStyle: context.isLargeTablet
+                  ? SimpleTheme(context).sizeXXL()
+                  : SimpleTheme(context).sizeXL(),
             ),
 
             Text(
               ':',
-              style: SimpleTheme(context).sizeXL(),
+              style: context.isLargeTablet
+                  ? SimpleTheme(context).sizeXXL()
+                  : SimpleTheme(context).sizeXL(),
             ),
 
             // minute
             AnimatedFlipCounter(
               wholeDigits: 2,
               value: controller.minute.value,
-              textStyle: SimpleTheme(context).sizeXL(),
+              textStyle: context.isLargeTablet
+                  ? SimpleTheme(context).sizeXXL()
+                  : SimpleTheme(context).sizeXL(),
             ),
 
             Text(
               ':',
-              style: SimpleTheme(context).sizeXL(),
+              style: context.isLargeTablet
+                  ? SimpleTheme(context).sizeXXL()
+                  : SimpleTheme(context).sizeXL(),
             ),
 
             // seconds
             AnimatedFlipCounter(
               wholeDigits: 2,
               value: controller.second.value,
-              textStyle: SimpleTheme(context).sizeXL(),
+              textStyle: context.isLargeTablet
+                  ? SimpleTheme(context).sizeXXL()
+                  : SimpleTheme(context).sizeXL(),
             ),
           ],
         ),
